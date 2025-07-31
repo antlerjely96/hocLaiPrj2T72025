@@ -13,4 +13,9 @@ class SchoolYear extends Model
 
     protected $table = 'school_years';
     protected $fillable = ['name', 'start_year', 'end_year'];
+
+    public function classrooms(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Classroom::class);
+    }
 }
