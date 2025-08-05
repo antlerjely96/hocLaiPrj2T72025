@@ -1,11 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>School year list</title>
-</head>
-<body>
+@extends('layouts.layout')
+@section('page-heading')
+    School year list
+@endsection
+@section('content')
     <a href="{{ route('school-years.create') }}">Add a school year</a>
     <table border="1px" cellpadding="0" cellspacing="0" width="100%">
         <tr>
@@ -35,5 +32,4 @@
             </tr>
         @endforeach
     </table>
-</body>
-</html>
+@endsection
